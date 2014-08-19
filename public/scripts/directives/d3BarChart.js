@@ -8,7 +8,8 @@
       restrict: 'EA',
 
       scope: {
-        data: "="
+        data: "=",
+        money: "=money"
       },
 
       link: function(scope, iElement, iAttrs) {
@@ -80,7 +81,10 @@
             return (width / 2) - 10;
           })
           .text(function(d) {
-            return d > 6? '$' + d : '';
+            if (scope.money)
+              return d > 6? '$' + d : '';
+            else
+              return d > 6? + d : '';
           });
         };
       }

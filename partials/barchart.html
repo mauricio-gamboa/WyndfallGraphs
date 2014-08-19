@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="page-header">
-        <h1>RevPAR</h1>
+        <h1>Last 7 Days Chart</h1>
       </div>
-      <div class="bar-chart-view" ng-controller="BarChartCtrl">
+      <div id="sevenDaysBar" class="bar-chart-view" ng-controller="BarChartCtrl">
         <div class="clearfix bar-chart-wrapper">
           <div class="column pull-left" ng-repeat="day in last7Days">
             <div class="date" ng-click="showDayData(day)">
@@ -12,7 +12,7 @@
               <br>
               <span>{{day.dayString}}</span>
             </div>
-            <div class="bar" d3-bar-chart data="day.data"></div>
+            <div class="bar" d3-bar-chart money="true" data="day.data"></div>
           </div>
         </div>
       </div>

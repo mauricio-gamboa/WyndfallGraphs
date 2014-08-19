@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="page-header">
+        <h1>Room Statistics</h1>
+      </div>
+      <div id="room-statistics" class="bar-chart-view" ng-controller="RoomStatisticsCtrl">
+        <div class="date" ng-click="showDayData(day)">
+          <span>{{today.monthAndDay}}/{{today.year}}</span>
+        </div>
+        <div class="clearfix bar-chart-wrapper">
+          <div class="column pull-left" ng-repeat="statistic in today.statistics">
+            <div class="bar" d3-bar-chart data="statistic.data" money="statistic.name == 'Revenue' || statistic.name == 'revPAR'"></div>
+            <span class="legend">{{statistic.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

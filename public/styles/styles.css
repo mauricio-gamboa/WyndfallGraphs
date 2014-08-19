@@ -55,16 +55,28 @@ Bar Chart Styles
 ****************************
 ***************************/
 
-.bar-chart-wrapper .column {
+.column .bar {
+  font-family: 'open_sansregular';
+  font-size: 14px;
+  height: 350px;
+  width: 100%;
+}
+
+#sevenDaysBar .bar-chart-wrapper .column {
   margin-right: 5%;
   width: 10%;
 }
 
-.bar-chart-wrapper .column:last-child {
-  margin-right: 0;
+#room-statistics .bar-chart-wrapper .column {
+  margin-right: 5%;
+  width: 30%;
 }
 
-.bar-chart-wrapper .column .date {
+.bar-chart-wrapper .column:last-child {
+  margin-right: 0 !important;
+}
+
+.date {
   color: #444444;
   cursor: pointer;
   line-height: normal;
@@ -72,17 +84,15 @@ Bar Chart Styles
   text-align: center;
 }
 
-.bar-chart-wrapper .column .date span {
+.date span {
   font-size: 12px;
   color: #b4b4b4;
 }
 
-.bar-chart-wrapper .column .bar {
-  height: 350px;
-  width: 100%;
-}
-
-.bar-chart-wrapper .column .bar {
-  font-family: 'open_sansregular';
-  font-size: 14px;
+.column .legend {
+  display: block;
+  font-size: 13px;
+  color: #acadb5;
+  text-align: center;
+  margin-top: 10px;
 }
