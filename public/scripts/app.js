@@ -8,8 +8,7 @@
     $routeProvider
 
     .when('/barChart', {
-      templateUrl: 'partials/barChart.html',
-      controller: 'BarChartCtrl'
+      templateUrl: 'partials/barChart.html'
     })
 
     .when('/demo', {

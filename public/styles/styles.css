@@ -4,6 +4,39 @@ General Styles
 ****************************
 ***************************/
 
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url('../fonts/opensans-semibold-webfont.eot');
+  src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-semibold-webfont.woff') format('woff'),
+  url('../fonts/opensans-semibold-webfont.ttf') format('truetype'),
+  url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/opensans-regular-webfont.eot');
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-regular-webfont.woff') format('woff'),
+  url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+  url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url('../fonts/opensans-light-webfont.eot');
+  src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-light-webfont.woff') format('woff'),
+  url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+  url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .show-xs,
 .show-s,
 .show-m,
@@ -11,18 +44,20 @@ General Styles
   display: none;
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #444444;
+}
+
 /***************************
 ****************************
 Bar Chart Styles
 ****************************
 ***************************/
-.bar {
-  height: 350px;
-  width: 70px;
-}
 
 .bar-chart-wrapper .column {
-  margin-right: 20px;
+  margin-right: 5%;
+  width: 10%;
 }
 
 .bar-chart-wrapper .column:last-child {
@@ -30,9 +65,11 @@ Bar Chart Styles
 }
 
 .bar-chart-wrapper .column .date {
-  text-align: center;
+  color: #444444;
+  cursor: pointer;
   line-height: normal;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .bar-chart-wrapper .column .date span {
@@ -40,11 +77,12 @@ Bar Chart Styles
   color: #b4b4b4;
 }
 
-.controls {
-  margin-bottom: 20px;
-  text-align: center;
+.bar-chart-wrapper .column .bar {
+  height: 350px;
+  width: 100%;
 }
 
-.controls .date-controls {
-  display: inline-block;
+.bar-chart-wrapper .column .bar {
+  font-family: 'open_sansregular';
+  font-size: 14px;
 }

@@ -8,22 +8,17 @@
       restrict: 'EA',
 
       scope: {
-        data: "=",
-        label: "@",
-        onClick: "&"
+        data: "="
       },
 
       link: function(scope, iElement, iAttrs) {
-        var colours = ['#7fbfe6', '#67b369', '#ebebeb'];
+        var colours = ['#79bee9', '#109101', '#ebebeb'];
 
-        var width = iElement[0].offsetWidth,
-        height = iElement[0].offsetHeight;
+        var height = iElement[0].offsetHeight;
 
         var svg = d3.select(iElement[0])
         .append('svg')
-        .attr('width', width)
-        .attr('height', height)
-        .append("g");
+        .attr('width', '100%');
 
         window.onresize = function() {
           return scope.$apply();
@@ -40,26 +35,52 @@
         }, true);
 
         scope.render = function(data) {
+          var width = iElement[0].offsetWidth;
           svg.selectAll("*").remove();
+          svg.attr('height', height);
           
-          var y = 0;
           var total = 0;
+          var previousH = 0;
+          var previousHText = 0;
 
           data.forEach(function(d, i) {
             total += d;
           });
 
-          data.forEach(function(d, i) {
+          svg.selectAll("rect")
+          .data(data)
+          .enter()
+          .append("rect")
+          .attr("height", function(d, i) {
             var h = (d * height) / total;
-            svg.append("rect")
-            .attr("width", width)
-            .attr("y", y)
-            .attr("height", h)
-            .attr('fill', colours[i])
-            .on("click", function(){
-              return scope.onClick();
-            });
-            y += h;
+            return h;
+          })
+          .attr("y", function(d, i) {
+            var h = ((data[i - 1] || 0) * height) / total;
+            if (i > 0) previousH += h;
+            return previousH;
+          })
+          .attr("width", '100%')
+          .attr('fill', function(d, i) {
+            return colours[i];
+          });
+
+          svg.selectAll("text")
+          .data(data)
+          .enter()
+          .append("text")
+          .attr("fill", "#fff")
+          .attr("y", function(d, i){
+            var h = ((data[i - 1] || 0) * height) / total;
+            var currentHText = (d * height) / total;
+            if (i > 0) previousHText += h;
+            return previousHText + (currentHText / 2) + 4;
+          })
+          .attr('x', function(d, i) {
+            return (width / 2) - 10;
+          })
+          .text(function(d) {
+            return d > 6? '$' + d : '';
           });
         };
       }

@@ -2,29 +2,18 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="page-header">
-        <h1>{{title}}</h1>
+        <h1>RevPAR</h1>
       </div>
-      <div class="controls clearfix">
-        <div class="btn-group pull-left">
-          <button type="button" class="btn btn-default btn-sm">1 DAY</button>
-          <button type="button" class="btn btn-default btn-sm active">7 DAYS</button>
-          <button type="button" class="btn btn-default btn-sm">MONTH</button>
-        </div>
-        <div class="date-controls">
-          <button type="button" class="btn btn-default btn-sm">Prev</button>
-          <span>August 19 - 8, 2014</span>
-          <button type="button" class="btn btn-default btn-sm">Next</button>
-        </div>
-        <button class="btn btn-default btn-sm pull-right">Today</button>
-      </div>
-      <div class="clearfix bar-chart-wrapper">
-        <div class="column pull-left" ng-repeat="day in last7Days">
-          <div class="date">
-            <strong>{{day.monthAndDay}}</strong>
-            <br>
-            <span>{{day.dayString}}</span>
+      <div class="bar-chart-view" ng-controller="BarChartCtrl">
+        <div class="clearfix bar-chart-wrapper">
+          <div class="column pull-left" ng-repeat="day in last7Days">
+            <div class="date" ng-click="showDayData(day)">
+              <strong>{{day.monthAndDay}}</strong>
+              <br>
+              <span>{{day.dayString}}</span>
+            </div>
+            <div class="bar" d3-bar-chart data="day.data"></div>
           </div>
-          <div class="bar" d3-bar-chart data="day.data" on-click="d3OnClick()"></div>
         </div>
       </div>
     </div>

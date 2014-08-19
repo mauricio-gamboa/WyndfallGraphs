@@ -5,15 +5,7 @@
 
   .controller('BarChartCtrl', ['$scope', 'Utils', function($scope, Utils){
 
-    $scope.title = "RevPAR";
 
-    $scope.d3Data = [20, 30, 50];
-
-    $scope.d3OnClick = function(){
-      console.log('alo');
-    };
-
-    $scope.last7Days = Utils.getLastDays(7);
 
     function randombetween(min, max) {
       return Math.floor(Math.random()*(max-min+1)+min);
@@ -29,10 +21,23 @@
       return r;
     }
 
-    angular.forEach($scope.last7Days, function (value, key) {
-      value.data = generate(100, 2);
-    });
+    function populateData(days) {
+      angular.forEach(days, function (value, key) {
+        value.data = generate(100, 2);
+      });
+    }
+
+    $scope.showDayData = function(day){
+      console.log(day);
+    };
+
+    $scope.last7Days = Utils.getLastDays(7);
 
     $scope.last7Days.reverse();
+
+    populateData($scope.last7Days);
+
+    // setInterval(populateData($scope.last7Days), 3000);
+
   }]);
 }());
