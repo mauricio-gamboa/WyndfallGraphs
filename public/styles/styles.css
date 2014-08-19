@@ -17,5 +17,25 @@ Bar Chart Styles
 ****************************
 ***************************/
 .bar {
-  height: 300px;
+  height: 350px;
+  width: 70px;
+}
+
+.bar-chart-wrapper .column {
+  margin-right: 20px;
+}
+
+.bar-chart-wrapper .column:last-child {
+  margin-right: 0;
+}
+
+.bar-chart-wrapper .column .date {
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.bar-chart-wrapper .column .date span {
+  font-size: 12px;
+  color: #b4b4b4;
 }

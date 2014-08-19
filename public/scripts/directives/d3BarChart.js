@@ -14,40 +14,54 @@
       },
 
       link: function(scope, iElement, iAttrs) {
+        var colours = ['#ebebeb', '#7fbfe6', '#67b369'];
 
-        var data = [50, 25, 25];
-
-        var width = 30,
+        var width = iElement[0].offsetWidth,
         height = iElement[0].offsetHeight;
 
-        var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
-
-        var y = d3.scale.linear().rangeRound([height, 0]);
-
-        var color = d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
         var svg = d3.select(iElement[0])
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height)
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
         .append("g");
 
-        data.forEach(function(d, i) {
-          var y0 = 0;
-          d.ages = color.domain().map(function(name) { 
-            return { name: name, y0: y0, y1: y0 += +d[name]}; 
-          });
-          console.log(d, i);
+        window.onresize = function() {
+          return scope.$apply();
+        };
+
+        scope.$watch(function(){
+          return angular.element(window)[0].innerWidth;
+        }, function(){
+          return scope.render(scope.data);
         });
 
-        var rect = svg.selectAll(".rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("width", width)
-        .attr("y", function(d) {
-          // console.log(d);
-        });
+        scope.$watch('data', function(newVals, oldVals) {
+          return scope.render(newVals);
+        }, true);
+
+        scope.render = function(data) {
+          svg.selectAll("*").remove();
+          
+          var y = 0;
+          var total = 0;
+
+          data.forEach(function(d, i) {
+            total += d;
+          });
+
+          data.forEach(function(d, i) {
+            var h = (d * height) / total;
+            svg.append("rect")
+            .attr("width", width)
+            .attr("y", y)
+            .attr("height", h)
+            .attr('fill', colours[i])
+            .on("click", function(){
+              return scope.onClick();
+            });
+            y += h;
+          });
+        };
       }
     };
   }]);

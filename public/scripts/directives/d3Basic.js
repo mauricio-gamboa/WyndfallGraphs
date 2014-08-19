@@ -36,7 +36,6 @@
 
         // define render function
         scope.render = function(data){
-          console.log(data);
         // remove all previous items before render
         svg.selectAll("*").remove();
 
