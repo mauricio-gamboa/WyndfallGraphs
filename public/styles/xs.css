@@ -7,7 +7,7 @@
     display: block;
   }
 
-  .bar-chart-wrapper .column .bar {
+  .column .bar {
     font-size: 11px;
   }
 }

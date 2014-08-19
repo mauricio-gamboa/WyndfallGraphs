@@ -7,17 +7,16 @@
   .config(function ($routeProvider) {
     $routeProvider
 
-    .when('/barChart', {
+    .when('/7DaysChart', {
       templateUrl: 'partials/barChart.html'
     })
 
-    .when('/demo', {
-      templateUrl: 'partials/demo.html',
-      controller: 'DemoCtrl'
+    .when('/roomStatistics', {
+      templateUrl: 'partials/roomStatistics.html'
     })
 
     .otherwise({
-      redirectTo: '/barChart',
+      redirectTo: '/7DaysChart',
     });
   });
 

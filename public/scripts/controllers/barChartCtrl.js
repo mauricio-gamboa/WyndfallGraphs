@@ -37,7 +37,5 @@
 
     populateData($scope.last7Days);
 
-    // setInterval(populateData($scope.last7Days), 3000);
-
   }]);
 }());
