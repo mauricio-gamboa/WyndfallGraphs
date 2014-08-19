@@ -14,7 +14,7 @@
       },
 
       link: function(scope, iElement, iAttrs) {
-        var colours = ['#ebebeb', '#7fbfe6', '#67b369'];
+        var colours = ['#7fbfe6', '#67b369', '#ebebeb'];
 
         var width = iElement[0].offsetWidth,
         height = iElement[0].offsetHeight;

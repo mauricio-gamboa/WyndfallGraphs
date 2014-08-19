@@ -5,7 +5,7 @@
 
   .controller('BarChartCtrl', ['$scope', 'Utils', function($scope, Utils){
 
-    $scope.title = "Bar Chart";
+    $scope.title = "RevPAR";
 
     $scope.d3Data = [20, 30, 50];
 
@@ -30,7 +30,7 @@
     }
 
     angular.forEach($scope.last7Days, function (value, key) {
-      value.data = generate(100, 3);
+      value.data = generate(100, 2);
     });
 
     $scope.last7Days.reverse();

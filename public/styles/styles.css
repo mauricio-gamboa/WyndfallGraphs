@@ -39,3 +39,12 @@ Bar Chart Styles
   font-size: 12px;
   color: #b4b4b4;
 }
+
+.controls {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controls .date-controls {
+  display: inline-block;
+}
