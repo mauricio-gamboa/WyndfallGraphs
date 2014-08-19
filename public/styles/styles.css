@@ -1,0 +1,88 @@
+/***************************
+****************************
+General Styles
+****************************
+***************************/
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url('../fonts/opensans-semibold-webfont.eot');
+  src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-semibold-webfont.woff') format('woff'),
+  url('../fonts/opensans-semibold-webfont.ttf') format('truetype'),
+  url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/opensans-regular-webfont.eot');
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-regular-webfont.woff') format('woff'),
+  url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+  url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url('../fonts/opensans-light-webfont.eot');
+  src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-light-webfont.woff') format('woff'),
+  url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+  url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.show-xs,
+.show-s,
+.show-m,
+.show-xl {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #444444;
+}
+
+/***************************
+****************************
+Bar Chart Styles
+****************************
+***************************/
+
+.bar-chart-wrapper .column {
+  margin-right: 5%;
+  width: 10%;
+}
+
+.bar-chart-wrapper .column:last-child {
+  margin-right: 0;
+}
+
+.bar-chart-wrapper .column .date {
+  color: #444444;
+  cursor: pointer;
+  line-height: normal;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bar-chart-wrapper .column .date span {
+  font-size: 12px;
+  color: #b4b4b4;
+}
+
+.bar-chart-wrapper .column .bar {
+  height: 350px;
+  width: 100%;
+}
+
+.bar-chart-wrapper .column .bar {
+  font-family: 'open_sansregular';
+  font-size: 14px;
+}

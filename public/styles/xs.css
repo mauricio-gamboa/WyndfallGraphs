@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+  .hide-xs {
+    display: none !important;
+  }
+
+  .show-xs {
+    display: block;
+  }
+
+  .bar-chart-wrapper .column .bar {
+    font-size: 11px;
+  }
+}
