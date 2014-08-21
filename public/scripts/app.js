@@ -15,6 +15,10 @@
       templateUrl: 'partials/roomStatistics.html'
     })
 
+    .when('/lineChart', {
+      templateUrl: 'partials/lineChart.html'
+    })
+
     .otherwise({
       redirectTo: '/7DaysChart',
     });
