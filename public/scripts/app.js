@@ -7,11 +7,15 @@
   .config(function ($routeProvider) {
     $routeProvider
 
-    .when('/7DaysChart', {
+    .when('/', {
+      templateUrl: 'partials/dashboard.html'
+    })
+
+    .when('/barChart7', {
       templateUrl: 'partials/barChart.html'
     })
 
-    .when('/roomStatistics', {
+    .when('/barChart3', {
       templateUrl: 'partials/roomStatistics.html'
     })
 
@@ -24,7 +28,7 @@
     })
 
     .otherwise({
-      redirectTo: '/7DaysChart',
+      redirectTo: '/',
     });
   });
 
