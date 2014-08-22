@@ -3,7 +3,7 @@
 
   angular.module('myApp.directives')
 
-  .directive('d3BarChart', ['d3', function(d3) {
+  .directive('d3BarChart', [function() {
     return {
       restrict: 'EA',
 

@@ -28,5 +28,5 @@
   angular.module('d3', []);
   angular.module('myApp.controllers', []);
   angular.module('myApp.services', []);
-  angular.module('myApp.directives', ['d3']);
+  angular.module('myApp.directives', []);
 }());
