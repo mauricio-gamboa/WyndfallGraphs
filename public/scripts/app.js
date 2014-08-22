@@ -15,6 +15,10 @@
       templateUrl: 'partials/roomStatistics.html'
     })
 
+    .when('/areaChart', {
+      templateUrl: 'partials/areaChart.html'
+    })
+
     .when('/lineChart', {
       templateUrl: 'partials/lineChart.html'
     })

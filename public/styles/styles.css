@@ -103,7 +103,7 @@ Bar Chart Styles
 
 /***************************
 ****************************
-Line Chart Styles
+Area Chart Styles
 ****************************
 ***************************/
 .c3-area {
@@ -128,4 +128,12 @@ text {
   position: relative;
 }
 
-#lineChartWrapper {}
+/***************************
+****************************
+Line Chart Styles
+****************************
+***************************/
+
+.c3-line {
+  stroke-width: 3px!important;
+}

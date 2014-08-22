@@ -3,12 +3,13 @@
 
   angular.module('myApp.directives')
 
-  .directive('d3LineChart', [function() {
+  .directive('d3AreaChart', [function() {
     return {
       restrict: 'EA',
 
       scope: {
-        data: "="
+        data: "=",
+        capacity: "="
       },
 
       link: function(scope, iElement, iAttrs) {
@@ -16,14 +17,15 @@
           bindto: iElement[0],
           data: {
             columns: scope.data,
-            type: 'line'
+            type: 'area'
           },
           point: { 
             show: false 
           },
           grid: {
             y: {
-              show: true
+              show: true,
+              lines: [{value: scope.capacity, class: 'capacity-line'}]
             }
           },
           axis: {
@@ -35,8 +37,11 @@
             }
           },
           color: { 
-            pattern: ['#6495c7', '#a9c571', 'red', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] 
+            pattern: ['#6495c7', '#a9c571', '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] 
           }
+          // tooltip: {
+          //   show: false
+          // }
         });
       }
     };
