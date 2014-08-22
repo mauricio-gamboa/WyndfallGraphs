@@ -49,6 +49,10 @@ h1, h2, h3, h4, h5, h6,
   color: #444444;
 }
 
+body {
+  font-family: 'open_sansregular';
+}
+
 /***************************
 ****************************
 Bar Chart Styles
@@ -96,3 +100,32 @@ Bar Chart Styles
   text-align: center;
   margin-top: 10px;
 }
+
+/***************************
+****************************
+Line Chart Styles
+****************************
+***************************/
+.c3-area {
+  opacity: 0.6 !important;
+}
+
+.capacity-line line {
+  stroke: #00e200 !important;
+}
+
+.c3-xgrid, 
+.c3-ygrid {
+  stroke: #bebebe !important;
+  stroke-dasharray: none !important;
+}
+
+text {
+  font-family: 'open_sansregular';
+}
+
+#lineChartWrapper {
+  position: relative;
+}
+
+#lineChartWrapper {}
