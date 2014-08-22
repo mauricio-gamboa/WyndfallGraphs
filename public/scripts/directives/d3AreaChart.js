@@ -3,7 +3,7 @@
 
   angular.module('myApp.directives')
 
-  .directive('d3LineChart', [function() {
+  .directive('d3AreaChart', [function() {
     return {
       restrict: 'EA',
 
