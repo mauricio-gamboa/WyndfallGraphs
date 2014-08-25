@@ -27,6 +27,10 @@
       templateUrl: 'partials/lineChart.html'
     })
 
+    .when('/circleGraph', {
+      templateUrl: 'partials/circleGraph.html'
+    })
+
     .otherwise({
       redirectTo: '/',
     });
