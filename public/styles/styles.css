@@ -137,3 +137,48 @@ Line Chart Styles
 .c3-line {
   stroke-width: 3px!important;
 }
+
+/***************************
+****************************
+Circle Graphs Styles
+****************************
+***************************/
+
+.radial-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.radial-svg .background {
+  fill: #FFFFFF;
+  fill-opacity: 0.01;
+}
+
+.radial-svg .component {
+  fill: #e1e1e1;
+}
+
+.radial-svg .component .label {
+  font-size: 11px;
+}
+
+.radial-svg .arc {
+  stroke-weight:0.1;
+  fill: #7cbee6;
+}
+
+
+.radial-svg .arc2 {
+  stroke-weight:0.1;
+  fill: #1c8f18;
+}
+
+
+.radial-svg .label {
+  fill: #444444;
+  font-family: 'open_sansregular';
+  font-weight: normal;
+  line-height: normal;
+  padding: 0;
+  text-anchor: middle;
+}
