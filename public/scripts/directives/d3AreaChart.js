@@ -39,9 +39,6 @@
           color: { 
             pattern: ['#6495c7', '#a9c571', '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] 
           }
-          // tooltip: {
-          //   show: false
-          // }
         });
       }
     };

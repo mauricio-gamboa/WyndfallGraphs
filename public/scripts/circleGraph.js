@@ -116,9 +116,7 @@ $(document).ready(function () {
           label.transition().duration(_duration)
           .tween("text",labelTween);
 
-        }
-
-      });
+        }});
 
       function onMouseClick(d) {
         if (typeof _mouseClick == "function") {
@@ -163,7 +161,6 @@ $(document).ready(function () {
       _arc2.outerRadius(_width/2 * 0.85);
       _arc2.innerRadius(_width/2 * 0.85 - (_width/2 * 0.15));
     }
-
 
     component.render = function() {
       measure();

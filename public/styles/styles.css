@@ -66,7 +66,7 @@ Bar Chart Styles
   width: 100%;
 }
 
-#sevenDaysBar .bar-chart-wrapper .column {
+.bar-chart-wrapper .column {
   margin-right: 5%;
   width: 10%;
 }
@@ -167,12 +167,10 @@ Circle Graphs Styles
   fill: #7cbee6;
 }
 
-
 .radial-svg .arc2 {
   stroke-weight:0.1;
   fill: #1c8f18;
 }
-
 
 .radial-svg .label {
   fill: #444444;

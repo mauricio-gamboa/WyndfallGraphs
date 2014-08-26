@@ -5,18 +5,38 @@
         <a class="btn btn-primary pull-right" href="#/">Dashboard</a>
         <h1>Last 7 Days Chart </h1>
       </div>
-      <div id="sevenDaysBar" class="bar-chart-view" ng-controller="BarChartCtrl">
+      <div class="bar-chart-view">
         <div class="clearfix bar-chart-wrapper">
-          <div class="column pull-left" ng-repeat="day in last7Days">
-            <div class="date" ng-click="showDayData(day)">
-              <strong>{{day.monthAndDay}}</strong>
-              <br>
-              <span>{{day.dayString}}</span>
-            </div>
-            <div class="bar" d3-bar-chart money="true" data="day.data"></div>
+          <div class="column pull-left">
+            <div id="bar-1" class="bar"></div>
+          </div>
+
+          <div class="column pull-left">
+            <div id="bar-2" class="bar"></div>
+          </div>
+
+          <div class="column pull-left">
+            <div id="bar-3" class="bar"></div>
+          </div>
+
+          <div class="column pull-left">
+            <div id="bar-4" class="bar"></div>
+          </div>
+
+          <div class="column pull-left">
+            <div id="bar-5" class="bar"></div>
+          </div>
+
+          <div class="column pull-left">
+            <div id="bar-6" class="bar"></div>
+          </div>
+
+          <div class="column pull-left">
+            <div id="bar-7" class="bar"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script src="public/scripts/barGraph.js"></script>
