@@ -180,3 +180,51 @@ Circle Graphs Styles
   padding: 0;
   text-anchor: middle;
 }
+
+/***************************
+****************************
+Sideways Styles
+****************************
+***************************/
+
+.sidewaysbar {
+  background-color: #79bee9;
+  height: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sidewaysbar > div {
+  background-color: #109101;
+  height: 100%;
+}
+
+.sideways-wrapper {
+  margin-right: 5%;
+  width: 30%;
+}
+
+.sideways-wrapper:last-child {
+  margin-right: 0;
+}
+
+.sideways-wrapper h1 {
+  margin: 0 0 10px 0;
+}
+
+.sideways-wrapper span {
+  color: #a3abc2;
+}
+
+.sideways-wrapper span.down {
+  color: #cb0000;
+}
+
+.sideways-wrapper span.up {
+  color: #109101;
+}
+
+.sideways-wrapper .sidewaysbar {
+  margin-bottom: 5px;
+}

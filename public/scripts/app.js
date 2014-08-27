@@ -15,10 +15,6 @@
       templateUrl: 'partials/barChart.html'
     })
 
-    .when('/barChart3', {
-      templateUrl: 'partials/roomStatistics.html'
-    })
-
     .when('/areaChart', {
       templateUrl: 'partials/areaChart.html'
     })
@@ -29,6 +25,10 @@
 
     .when('/circleGraph', {
       templateUrl: 'partials/circleGraph.html'
+    })
+
+    .when('/sidewaysBar', {
+      templateUrl: 'partials/sidewaysBar.html'
     })
 
     .otherwise({
