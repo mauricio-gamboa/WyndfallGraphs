@@ -62,22 +62,25 @@ Bar Chart Styles
 .column .bar {
   font-family: 'open_sansregular';
   font-size: 14px;
-  height: 350px;
+  height: 100%;
   width: 100%;
+}
+
+.bar-chart-wrapper {
+  height: 350px;
 }
 
 .bar-chart-wrapper .column {
   margin-right: 5%;
   width: 10%;
-}
-
-#room-statistics .bar-chart-wrapper .column {
-  margin-right: 5%;
-  width: 30%;
+  height: 100%;
 }
 
 .bar-chart-wrapper .column:last-child {
+  height: 50%;
   margin-right: 0 !important;
+  position: relative;
+  top: 50%;
 }
 
 .date {
