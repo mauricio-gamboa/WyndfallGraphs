@@ -10,4 +10,12 @@
   .column .bar {
     font-size: 11px;
   }
+
+  .sideways-wrapper h1 {
+  	font-size: 14px;
+  }
+
+  .sideways-wrapper {
+  	font-size: 12px;
+  }
 }
