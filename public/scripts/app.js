@@ -31,6 +31,10 @@
       templateUrl: 'partials/sidewaysBar.html'
     })
 
+    .when('/barRelative', {
+      templateUrl: 'partials/barRelative.html'
+    })
+
     .otherwise({
       redirectTo: '/',
     });
