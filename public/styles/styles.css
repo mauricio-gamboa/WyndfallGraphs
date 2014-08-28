@@ -231,3 +231,23 @@ Sideways Styles
 .sideways-wrapper .sidewaysbar {
   margin-bottom: 5px;
 }
+
+/***************************
+****************************
+Stream Chart Styles
+****************************
+***************************/
+
+.stream-chart { 
+  background: #fff;
+  position: relative;
+  height: 400px;
+}
+
+.stream-chart .axis path, 
+.stream-chart .axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}

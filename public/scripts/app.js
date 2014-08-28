@@ -35,6 +35,10 @@
       templateUrl: 'partials/barRelative.html'
     })
 
+    .when('/streamChart', {
+      templateUrl: 'partials/streamChart.html'
+    })
+
     .otherwise({
       redirectTo: '/',
     });
