@@ -2,7 +2,8 @@ $(document).ready(function () {
   function areaChart(parent) {
 
     var _data = null;
-    var _line = null;
+    var _lineY = null;
+    var _lineX = null;
     _categories = null;
     
     function component () {
@@ -25,7 +26,10 @@ $(document).ready(function () {
         grid: {
           y: {
             show: true,
-            lines: [{value: _line, class: 'capacity-line'}]
+            lines: [{value: _lineY, class: 'capacity-line'}]
+          },
+          x: {
+            lines: [{value: _lineX, class: 'capacity-line'}]
           }
         },
         axis: {
@@ -68,9 +72,15 @@ $(document).ready(function () {
       return component;
     };
 
-    component.line = function(line) {
-      if (isNaN(line)) return;
-      _line = line;
+    component.lineY = function(lineY) {
+      if (isNaN(lineY)) return;
+      _lineY = lineY;
+      return component;
+    };
+
+    component.lineX = function(lineX) {
+      if (isNaN(lineX)) return;
+      _lineX = lineX;
       return component;
     };
 
@@ -90,6 +100,6 @@ $(document).ready(function () {
   var a1 = areaChart(document.getElementById('area-chart'))
   .data(theData)
   .categories(theCategories)
-  .line(225)
+  .lineX(10) // the numbers is the position in the series array
   .render();
 });
