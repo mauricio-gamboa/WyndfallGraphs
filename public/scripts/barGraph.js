@@ -60,7 +60,7 @@ $(document).ready(function () {
         return previousHText + (currentHText / 2) + 4;
       })
       .attr('x', function(d, i) {
-        return (width / 2) - 10;
+        return (width / 2);
       })
       .text(function(d) {
         if (_money)
@@ -108,7 +108,7 @@ $(document).ready(function () {
 
   function startGraphs () {
     var b1 = barGraph(document.getElementById('bar-1'))
-    .data([20, 80])
+    .data([1000, 8000])
     .money(true)
     .onClick(onClick1)
     .render();
