@@ -1,0 +1,9 @@
+@media (min-width: 768px) and (max-width: 992px) {
+  .hide-s {
+    display: none !important;
+  }
+
+  .show-s {
+    display: block;
+  }
+}
