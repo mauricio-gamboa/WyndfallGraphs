@@ -66,6 +66,10 @@ Bar Chart Styles
   width: 100%;
 }
 
+.column .bar text {
+  text-anchor: middle;
+}
+
 .bar-chart-wrapper {
   height: 350px;
 }
@@ -110,11 +114,12 @@ Area Chart Styles
 ****************************
 ***************************/
 .c3-area {
-  opacity: 0.6 !important;
+  opacity: 0.5 !important;
 }
 
 .capacity-line line {
   stroke: #00e200 !important;
+  stroke-width: 2px!important;
 }
 
 .c3-xgrid, 
@@ -137,7 +142,7 @@ Line Chart Styles
 ****************************
 ***************************/
 
-.c3-line {
+.line-chart .c3-line {
   stroke-width: 3px!important;
 }
 
